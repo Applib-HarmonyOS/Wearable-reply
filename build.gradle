@@ -67,6 +67,5 @@ sonarqube {
         property "sonar.sources", "entry,library"
         property "sonar.java.binaries", "entry/build,library/build"
         property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/checkstyle.xml"
-        property "sonar.login","05daa1d66ba3052cfaeccbf07c90a0175ed3a90c"
     }
 }
