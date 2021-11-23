@@ -43,11 +43,11 @@ public class WearableReplyAbilitySlice extends AbilitySlice implements ItemClick
         try {
             start(context, context.getResourceManager().getElement(cannedResponseList).getStringArray());
         } catch (IOException e) {
-            e.printStackTrace();
+            //IOException
         } catch (NotExistException e) {
-            e.printStackTrace();
+            //NotExistException
         } catch (WrongTypeException e) {
-            e.printStackTrace();
+            //WrongTypeException
         }
     }
 
