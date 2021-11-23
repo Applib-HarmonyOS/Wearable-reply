@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+
+    ohos:orientation="vertical"
+    ohos:background_element="#424242">
+
+    <DependentLayout
+        ohos:top_margin="20vp"
+        ohos:left_padding="20vp"
+        ohos:layout_alignment="horizontal_center"
+        ohos:width="match_content"
+        ohos:height="match_content"
+        ohos:bottom_margin="8vp">
+
+        <Image
+            ohos:id="$+id:voice"
+            ohos:width="48vp"
+            ohos:height="48vp"
+            ohos:padding="12vp"
+            ohos:end_margin="6vp"
+            ohos:layout_alignment="center"
+            ohos:component_description="Voice Input"
+            ohos:image_src="$graphic:wearreply_record_audio"/>
+
+        <Image
+            ohos:id="$+id:text"
+            ohos:width="48vp"
+            ohos:height="48vp"
+            ohos:padding="12vp"
+            ohos:start_margin="30vp"
+            ohos:right_margin="50vp"
+            ohos:layout_alignment="center"
+            ohos:component_description="Text input"
+            ohos:image_src="$graphic:wearreply_text" />
+
+    </DependentLayout>
+
+    <ListContainer
+        ohos:height="100vp"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:id="$+id:recycler_view"/>
+
+</DirectionalLayout>
