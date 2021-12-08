@@ -1,7 +1,13 @@
+[![Build](https://github.com/applibgroup/wearable-reply/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/wearable-reply/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Wearable-reply&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Wearable-reply)
+
 # Wearable Reply
 
 ## Introduction:
 This library aims to simplify allowing text input in your app, via voice, keyboard, or canned responses.
+
+# Source
+This library has been inspired by [klinker24\\wearable-reply](https://github.com/klinker24/wearable-reply).
 
 ## Usage Instructions:
 
@@ -43,7 +49,7 @@ Method 2:
             mavenCentral()
         }
     }
-implementation project(path: ':library')
+implementation 'dev.applibgroup:wearablereply:1.0.0'
 ```
 
 ## License
