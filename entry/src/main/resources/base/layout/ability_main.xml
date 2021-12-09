@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical"
+    ohos:padding="16vp"
+    ohos:background_element="#424242">
+
+    <Button ohos:id="$+id:reply"
+            ohos:width="100vp"
+            ohos:height="40vp"
+            ohos:text_size="18vp"
+            ohos:text_color="#FFFFFF"
+            ohos:text="Start Reply!"
+        ohos:background_element="#808080"/>
+
+</DirectionalLayout>

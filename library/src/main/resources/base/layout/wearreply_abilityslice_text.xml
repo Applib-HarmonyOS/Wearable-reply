@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="vertical_center"
+    ohos:orientation="vertical"
+    ohos:background_element="#424242">
+
+    <Text
+        ohos:id="$+id:hint_text"
+        ohos:width="match_content"
+        ohos:height="60vp"
+        ohos:text="Enter text"
+        ohos:text_color="#FFFFFF"
+        ohos:left_padding="20vp"
+        ohos:text_size="16vp"
+        ohos:alpha=".88"
+        ohos:start_margin="4vp"/>
+
+    <DirectionalLayout
+        ohos:left_margin="20vp"
+        ohos:width="match_parent"
+        ohos:height="match_content"
+        ohos:orientation="horizontal">
+
+        <TextField
+            ohos:id="$+id:text"
+            ohos:width="match_content"
+            ohos:height="match_content"
+            ohos:text_size="16vp"
+            ohos:text_color="#FFFFFF"
+            ohos:text_input_type="pattern_text"
+            ohos:hint="                             "
+            ohos:max_text_lines="4"/>
+
+        <Image
+            ohos:width="80vp"
+            ohos:height="80vp"
+            ohos:padding="12vp"
+            ohos:layout_alignment="center"
+            ohos:image_src="$graphic:wearreply_forward"
+            ohos:id="$+id:confirm"
+            ohos:component_description="Submit"/>
+
+    </DirectionalLayout>
+
+
+</DirectionalLayout>

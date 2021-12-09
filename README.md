@@ -1,52 +1,56 @@
-![feature graphic](artwork/feature.png)
+[![Build](https://github.com/applibgroup/wearable-reply/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/wearable-reply/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_Wearable-reply&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_Wearable-reply)
 
 # Wearable Reply
 
-While Google made a very nice wearable activity to reply to notifications, they didn't make a good `Intent` to compose text within apps running Android Wear 2.0. This library aims to simplify allowing text input in your app, via voice, keyboard, or canned responses. Google really should have provided something like this from the start, and not juse kept it for notifications.
+## Introduction:
+This library aims to simplify allowing text input in your app, via voice, keyboard, or canned responses.
 
-## Including It In Your Project
+# Source
+This library has been inspired by [klinker24\\wearable-reply](https://github.com/klinker24/wearable-reply).
 
-To include it in your project, add this to your module's `build.gradle` file:
+## Usage Instructions:
 
-```groovy
-dependencies {
-	...
-	compile 'com.klinkerapps:wearable-reply:1.0.01
-}
-```
-
-Usage is really simple. Start the reply activity with:
+Usage is really simple. Start the reply abilityslice with:
 
 ```java
-WearableReplyActivity.start(activity);
-WearableReplyActivity.start(activity, R.array.reply_options);
-WearableReplyActivity.start(activity, new String[] {"test 1", "test 2" });
+WearableReplyAbilitySlice.start(abilityslice);
+WearableReplyAbilitySlice.start(abilityslice, new String[] {"test 1", "test 2" });
 ```
 
-If you omit the `String[]` or the array resource, the `WearableReplyActivity` will display the default canned responses: "Yes", "No", "Maybe", "Ok", and "Thanks".
+If you omit the `String[]` or the array resource, the `WearableReplyAbilitySlice` will display the default canned responses: "Yes", "No", "Maybe", "Ok", and "Thanks".
 
-When the user has done the text input, the results will be delivered to your `Activity#onActivityResult` method, and can be pulled with:
+When the user has done the text input, the results will be delivered to your `onResult` method, and can be pulled with:
 
 ```java
-@Override
-protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-
-    String result = WearableReplyActivity.getResultText(data);
-    if (result != null) {
-        Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+  @Override
+    protected void onResult(int requestCode, Intent resultIntent) {
+        super.onResult(requestCode, resultIntent);
+        String result = WearableReplyAbilitySlice.getResultText(resultIntent);
+        if (result != null) {
+            ToastDialog toastDialog = new ToastDialog(this);
+            toastDialog.setText(result).setDuration(1000).show();
+        }
     }
-}
 ```
 
-## Contributing
 
-Please fork this repository and contribute back using [pull requests](https://github.com/klinker24/wearable-reply/pulls). Features can be requested using [issues](https://github.com/klinker24/wearable-reply/issues). All code, comments, and critiques are greatly appreciated.
+## Installation instructions:
 
-## Changelog
+```
+Method 1:
+    Generate the .har package through the library and add the .har package to the libs folder.
+    Add the following code to the entry gradle:
+        implementation fileTree  (dir: 'libs', include: ['*.jar', '*.har'])
 
-The full change log for the library can be found [here](https://github.com/klinker24/wearable-reply/blob/master/CHANGELOG.md).
-
+Method 2:
+    allprojects{
+        repositories{
+            mavenCentral()
+        }
+    }
+implementation 'dev.applibgroup:wearablereply:1.0.0'
+```
 
 ## License
 

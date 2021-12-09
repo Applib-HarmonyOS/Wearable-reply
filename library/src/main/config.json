@@ -1,0 +1,25 @@
+{
+  "app": {
+    "bundleName": "xyz.klinker.wear_reply",
+    "vendor": "klinker",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "xyz.klinker.wear.reply",
+    "deviceType": [
+      "wearable",
+      "tablet",
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "library",
+      "moduleType": "har"
+    }
+  }
+}
